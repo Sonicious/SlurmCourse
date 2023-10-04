@@ -29,7 +29,7 @@ The partitions and their nodes which are available to you can be checked with `s
 
 ### About text editors
 
-You can use Visual Studio Code with the Remote plugin to work directly on the cluster. `nano` is not available. You can use `vim`, if you are familiar with it.
+You can use Visual Studio Code with the Remote plugin to work directly on the cluster. `nano` is available. You can also use `vim`, if you are familiar with it.
 
 ## Interactive Slurm console
 
@@ -38,18 +38,18 @@ Interactive jobs are useful for testing and debugging. They allow you to run com
 You prepare an interactive job with `salloc`. This reservers some computational resources for you. Then you can use `srun` to run commands on the compute nodes (without this the command runs on the login node). When you are done, you can free the resources with `exit` or `logout` again. The following example shows how to run a command on a compute node of `clara`:
 
 ```bash
-mn087nhya@login01:~ $ salloc -p clara
+$ salloc -p clara
 salloc: Pending job allocation 2832168
 salloc: job 2832168 queued and waiting for resources
 salloc: job 2832168 has been allocated resources
 salloc: Granted job allocation 2832168
-mn087nhya@login01:~ $ hostname
+$ hostname
 login01.sc.uni-leipzig.de
-mn087nhya@login01:~ $ srun hostname
+$ srun hostname
 clara05.sc.uni-leipzig.de
-mn087nhya@login01:~ $ exit
+$ exit
 salloc: Relinquishing job allocation 2832168
-mn087nhya@login01:~ $
+$
 ```
 
 You can also use `srun` without ressource allocation. then every time you have to wait for a free node. This is not recommended.
