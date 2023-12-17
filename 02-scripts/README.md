@@ -2,7 +2,7 @@
 
 ## General information
 
-Slurm is a queueing system. ...
+Slurm is a queueing system. 
 
 ## First Slurm job - Hello Slurm
 
@@ -125,5 +125,6 @@ The next sections will go into detail about the ressource allocations and the di
 ## Exercise
 
 1. Run the `HelloSlurm.sh` script on the cluster.
-2. Change the file `HelloSlurm.slurm` and check the status while running it.
-3.  
+1. Change the file `HelloSlurm.slurm` and check the status while running it.
+1. Try to exceed the time limitation you give yourself and find out what happens.
+1. Experiment around with small scripts using your favorite Programming language.
